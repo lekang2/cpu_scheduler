@@ -1,1 +1,13 @@
+This directory contains **workload traces** and **Python scripts** to generate custom workloads.
 
+## 📜 Contents
+- `workload1.txt` – Example workloads
+- `optimal.txt` – Baseline SLO values
+- `generator/` – Python scripts for workload generation
+  - `gen_workload_finalversion.py` – Standard workload generator
+
+## 🚀 Generate Workloads
+Example: create a workload with 400 requests, mean IAT = 2 ms
+```bash
+cd workloads/generator
+python gen_workload_finalversion.py --n 400 --iat 2 > ../workload_custom.txt
