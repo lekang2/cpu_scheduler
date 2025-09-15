@@ -27,7 +27,7 @@ TLAS integrates into the existing **SFS scheduler** framework, introducing:
 ## 🚀 Quick Start
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/TLAS.git
+git clone https://github.com/lekang2/TLAS.git
 cd TLAS
 
 # Build and run with Go
