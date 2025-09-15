@@ -1,0 +1,24 @@
+
+## 📜 Files
+- `main.go` – Entry point of the scheduler
+- `sfs.go` – Original Smart OS Scheduler (SFS)
+- `tla.go` – Tail Latency Alleviate Scheduler (TLAS)
+- `stcf_simulator.go` – Shortest Time-to-Completion First (STCF) simulator
+- `process.go` – Request/Process data structures
+- `execute.go` – Core scheduling execution logic
+- `schedtool.go` – Interface with Linux `schedtool`
+- `readTrace.go` – Workload trace parser
+- `go.mod`, `go.sum` – Go module dependencies
+
+## 🚀 Usage
+Compile and run TLAS with:
+```bash
+go run main.go -p tla -t test2 -n 12 > ../evaluation/results/tla.txt
+
+🔧 Notes
+
+    Scheduler terminates automatically when all requests finish
+
+    Request counter increments only on completion
+
+    SLOs are estimated dynamically and logged when updated
