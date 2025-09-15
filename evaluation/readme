@@ -1,1 +1,26 @@
+This directory contains **scripts and results** for evaluating TLAS against baseline schedulers.
 
+## 📜 Contents
+- `visualization/` – Python scripts for plotting
+  - `draw_finalversion.py` – Main CDF and tail-latency plots
+- `results/` – Experimental outputs (text logs, CSVs, plots)
+
+## 🚀 How to Run Evaluation
+1. Run schedulers with workload traces:
+```bash
+cd src
+go run main.go -p tla -t test2 -n 12 > ../evaluation/results/tla.txt
+go run main.go -p sfs -t test2 -n 12 > ../evaluation/results/sfs.txt
+
+    Plot results:
+
+cd evaluation/visualization
+python draw_finalversion.py --input ../results/sfs.txt ../results/tla.txt
+
+📊 Outputs
+
+    cdf-execution.png – Execution time distribution
+
+    cdf-tail.png – Tail latency metric CDF
+
+    queue_delay.png – Queue delay per request
