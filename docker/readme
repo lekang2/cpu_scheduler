@@ -1,1 +1,23 @@
+This directory contains the **Dockerfile** and instructions for running TLAS on CloudLab servers.
 
+## 🚀 Build and Run
+```bash
+# Ensure Docker is installed
+sudo apt update && sudo apt install docker.io -y
+docker --version
+
+# Build image
+docker build -t tlas .
+
+# Run container
+docker run --privileged --name tla-test -d \
+  --mount type=bind,source="$(pwd)"/../evaluation/results,target=/result \
+  tlas /bin/bash -c "cd src && ./main -p tla -t test2 -n 12 > /result/tla.txt"
+
+🔧 Notes
+
+    --privileged required for schedtool
+
+    Use docker cp to copy results:
+
+docker cp tla-test:/SFS-standalone/result ./result
