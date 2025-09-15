@@ -2,6 +2,9 @@ This directory contains **supporting materials** for the TLAS project.
 
 ## 📜 Contents
 - `architecture.png` – TLAS system architecture
+- `figures/` – Experimental plots
+- `finalpaper.pdf` – Full paper describing TLAS design, implementation, and evaluation
+
 ## 📖 Usage
 These documents provide background information, detailed results,  
 and references for readers interested in the academic contributions of TLAS.
